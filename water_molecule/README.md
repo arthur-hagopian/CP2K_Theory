@@ -214,6 +214,46 @@ Adds long-range dispersion interactions using the DFT-D3 correction.
 
 ---
 
+
+
+---
+
+## 10. MOTION section: geometry optimization settings
+
+```text
+&MOTION
+  &GEO_OPT
+    TYPE MINIMIZATION
+    OPTIMIZER BFGS
+    MAX_ITER 200
+    MAX_FORCE [eV/angstrom] 1.0E-4
+    RMS_FORCE [eV/angstrom] 5.0E-5
+  &END GEO_OPT
+&END MOTION
+```
+
+The `&MOTION` section controls **ionic motion**, i.e. how atomic positions are updated.
+
+- `TYPE MINIMIZATION`  
+  Specifies that a geometry optimization (energy minimization) is performed, consistent with `RUN_TYPE GEO_OPT`.
+
+- `OPTIMIZER BFGS`  
+  Uses the **Broyden–Fletcher–Goldfarb–Shanno (BFGS)** quasi-Newton algorithm.  
+  This is a robust and efficient optimizer for small molecular systems.
+
+- `MAX_ITER 200`  
+  Maximum number of geometry optimization steps.
+
+- `MAX_FORCE [eV/angstrom] 1.0E-4`  
+  Convergence criterion on the **maximum atomic force**.  
+  The optimization stops when the largest force component falls below this threshold.
+
+- `RMS_FORCE [eV/angstrom] 5.0E-5`  
+  Convergence criterion on the **root-mean-square force** over all atoms.  
+  Using both `MAX_FORCE` and `RMS_FORCE` ensures a well-relaxed molecular geometry.
+
+---
+
 ## Final remarks
 
 This water molecule example provides a **minimal, well-controlled reference system**.
