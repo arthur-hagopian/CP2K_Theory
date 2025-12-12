@@ -15,16 +15,207 @@ The full input discussed below is reproduced in the corresponding `input.inp` fi
   PRINT_LEVEL MEDIUM
   RUN_TYPE GEO_OPT
 &END GLOBAL
+```
 
-The &GLOBAL section controls how the calculation is run, independently of the physical system.
+The `&GLOBAL` section controls **how the calculation is run**, independently of the physical system.
 
-PROJECT H2O
-Sets the project name. All output files will start with this prefix (e.g. H2O.out).
+- `PROJECT H2O`  
+  Sets the project name. All output files will start with this prefix (e.g. `H2O.out`).
 
-PRINT_LEVEL MEDIUM
-Controls the verbosity of the output.
-MEDIUM is a good compromise: enough information to diagnose convergence without overwhelming the output file.
+- `PRINT_LEVEL MEDIUM`  
+  Controls the verbosity of the output.  
+  `MEDIUM` is a good compromise: enough information to diagnose convergence without overwhelming the output file.
 
-RUN_TYPE GEO_OPT
-Requests a geometry optimization, i.e. ionic positions are relaxed until forces vanish.
-For a single water molecule, this allows us to verify that the electronic structure setup is stable and well converged.
+- `RUN_TYPE GEO_OPT`  
+  Requests a **geometry optimization**, i.e. ionic positions are relaxed until forces vanish.
+
+---
+
+## 2. FORCE_EVAL section: how forces and energies are computed
+
+```text
+&FORCE_EVAL
+  METHOD Quickstep
+```
+
+`&FORCE_EVAL` defines **how energies and forces are evaluated**.
+
+- `METHOD Quickstep`  
+  Activates CP2K’s **Quickstep** module, which implements the **Gaussian and Plane Waves (GPW)** formalism.
+
+---
+
+## 3. SUBSYS section: atomic structure and simulation cell
+
+### 3.1 Simulation cell
+
+```text
+&SUBSYS
+  &CELL
+    ABC [angstrom] 25.0 25.0 25.0
+    PERIODIC NONE
+  &END CELL
+```
+
+- `ABC [angstrom] 25.0 25.0 25.0`  
+  Defines a cubic simulation box of side 25 Å.
+
+- `PERIODIC NONE`  
+  Specifies a **non-periodic** (isolated) system.
+
+---
+
+### 3.2 Atomic coordinates
+
+```text
+&TOPOLOGY
+  COORD_FILE_FORMAT XYZ
+  COORD_FILE_NAME structure.xyz
+&END TOPOLOGY
+```
+
+- `COORD_FILE_FORMAT XYZ`  
+  Indicates that atomic coordinates are read from an XYZ file.
+
+- `COORD_FILE_NAME structure.xyz`  
+  File containing the positions of the O and H atoms.
+
+---
+
+### 3.3 Atomic kinds: basis sets and pseudopotentials
+
+```text
+&KIND O
+  BASIS_SET TZV2P-MOLOPT-GTH
+  POTENTIAL GTH-PBE-q6
+&END KIND
+```
+
+```text
+&KIND H
+  BASIS_SET TZV2P-MOLOPT-GTH
+  POTENTIAL GTH-PBE-q1
+&END KIND
+```
+
+Each `&KIND` block defines how a given chemical element is treated.
+
+- `BASIS_SET TZV2P-MOLOPT-GTH`  
+  Triple-zeta valence basis set with polarization, optimized for molecular systems.
+
+- `POTENTIAL GTH-PBE-qX`  
+  GTH pseudopotentials consistent with the PBE functional.
+
+---
+
+## 4. DFT section: electronic structure setup
+
+```text
+&DFT
+  BASIS_SET_FILE_NAME /path/to/BASIS_MOLOPT
+  POTENTIAL_FILE_NAME /path/to/GTH_POTENTIALS
+```
+
+These lines tell CP2K **where to find** the basis sets and pseudopotentials.
+
+---
+
+### 4.1 Total charge
+
+```text
+CHARGE 0
+```
+
+Specifies the **total charge of the system**.
+
+---
+
+## 5. QS section: GPW numerical settings
+
+```text
+&QS
+  METHOD GPW
+  EPS_DEFAULT 1.0E-14
+  EPS_PGF_ORB 1.0E-14
+&END QS
+```
+
+Controls numerical thresholds in the GPW formalism.
+
+---
+
+## 6. POISSON section: electrostatics
+
+```text
+&POISSON
+  PERIODIC NONE
+  POISSON_SOLVER WAVELET
+&END POISSON
+```
+
+Uses a wavelet-based Poisson solver suitable for isolated systems.
+
+---
+
+## 7. MGRID section: real-space grids
+
+```text
+&MGRID
+  CUTOFF 600
+  REL_CUTOFF 80
+  NGRIDS 5
+&END MGRID
+```
+
+Controls the plane-wave grids used to represent the electron density.
+
+---
+
+## 8. SCF section: self-consistent field procedure
+
+```text
+&SCF
+  SCF_GUESS ATOMIC
+  EPS_SCF 1.0E-8
+  MAX_SCF 200
+  ADDED_MOS 5
+  CHOLESKY RESTORE
+```
+
+Defines how the electronic self-consistency cycle is performed.
+
+---
+
+## 9. XC section: exchange–correlation and dispersion
+
+```text
+&XC
+  &XC_FUNCTIONAL PBE
+  &END XC_FUNCTIONAL
+```
+
+Uses the PBE exchange–correlation functional.
+
+---
+
+### 9.1 van der Waals interactions
+
+```text
+&VDW_POTENTIAL
+  POTENTIAL_TYPE PAIR_POTENTIAL
+  &PAIR_POTENTIAL
+    TYPE DFTD3
+    REFERENCE_FUNCTIONAL PBE
+  &END PAIR_POTENTIAL
+&END VDW_POTENTIAL
+```
+
+Adds long-range dispersion interactions using the DFT-D3 correction.
+
+---
+
+## Final remarks
+
+This water molecule example provides a **minimal, well-controlled reference system**.
+Most of the tags introduced here will reappear in more complex simulations,
+such as **metal/water interfaces**, where periodicity and electrostatics play a central role.
