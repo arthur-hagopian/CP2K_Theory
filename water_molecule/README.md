@@ -19,7 +19,7 @@ The full input discussed below is reproduced in the corresponding `input.inp` fi
 &END GLOBAL
 ```
 
-The `&GLOBAL` section controls **how the calculation is run**.
+The `&GLOBAL` section controls **what type of calculation is run**.
 
 - `PROJECT H2O`  
   Sets the project name. All output files will start with this prefix (e.g. `H2O.out`).
@@ -31,11 +31,14 @@ The `&GLOBAL` section controls **how the calculation is run**.
 - `RUN_TYPE ENERGY`  
   Performs a **single-point energy calculation** at fixed atomic positions and cell parameters.
 
-  `RUN_TYPE ENERGY_FORCE` performs a **single-point energy calculation** where both the **total energy and atomic forces** are computed.
+  `RUN_TYPE ENERGY_FORCE`  
+   Performs a **single-point energy calculation** where both the **total energy and atomic forces** are computed.
 
-  `RUN_TYPE GEO_OPT` activates a **geometry optimization**, where atomic positions are relaxed until the force-based convergence criteria defined in `&MOTION / &GEO_OPT` are satisfied.
+  `RUN_TYPE GEO_OPT`  
+   Performs a **geometry optimization** where atomic positions are relaxed until the force-based convergence criteria defined in `&MOTION / &GEO_OPT` are satisfied.
 
-  `RUN_TYPE CELL_OPT` performs a **cell optimization**, in which both the **cell vectors and atomic positions** are optimized.
+  `RUN_TYPE CELL_OPT`  
+   Performs a **cell optimization** in which both the **cell vectors and atomic positions** are optimized.
 
 ---
 
