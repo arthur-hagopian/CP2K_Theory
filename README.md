@@ -1,1 +1,1 @@
-# CP2K_H2O
+# CP2K_Theory
