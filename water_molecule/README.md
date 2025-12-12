@@ -3,6 +3,8 @@
 This document explains, step by step, the CP2K input used to describe a **single isolated water molecule**.
 The goal is to build physical and numerical intuition for the main CP2K tags, starting from the simplest possible system.
 
+The emphasis is on the tags that matter most for **electronic-structure analysis**. In particular, this guide is written with the goal of understanding how CP2K settings impact the **density of states (DOS)** and **projected density of states (PDOS)**, and how to set up calculations that yield reliable DOS/PDOS for both simple molecules and, later, interfaces.  
+
 The full input discussed below is reproduced in the corresponding `input.inp` file.
 
 ---
