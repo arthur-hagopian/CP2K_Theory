@@ -120,8 +120,10 @@ Each `&KIND` block defines how a given chemical element is treated.
 
 - `BASIS_SET TZV2P-MOLOPT-GTH`  
   Specifies a **triple-zeta valence Gaussian basis set with two polarization functions**.  
-  “Triple-zeta” means that each valence orbital is described by three basis functions, allowing for a flexible description of bonding and charge redistribution.  
-  The **MOLOPT** (molecularly optimized) basis sets are optimized to provide a good balance between accuracy and efficiency for molecules and condensed-phase systems, making them well suited for molecular dynamics and interfacial simulations.
+  “Triple-zeta” means that each valence orbital is represented by three basis functions, allowing for a flexible description of bonding and charge redistribution.  
+  “Double polarization” indicates that two sets of higher-angular-momentum functions are added, enabling the electron density to distort and polarize more accurately, which is particularly important for describing anisotropic bonding and electronic states relevant for DOS/PDOS analysis.  
+
+  For lighter or exploratory calculations, smaller basis sets such as `SZV-GTH` (single-zeta valence) or `DZVP-GTH` (double-zeta valence with polarization) can be used at reduced computational cost, albeit with lower accuracy.
 
 - `POTENTIAL GTH-PBE-qX`  
   Specifies a **Goedecker–Teter–Hutter (GTH) norm-conserving pseudopotential** constructed consistently with the PBE exchange–correlation functional.  
