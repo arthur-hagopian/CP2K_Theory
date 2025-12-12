@@ -59,12 +59,16 @@ The `&GLOBAL` section controls **how the calculation is run**.
 &SUBSYS
   &CELL
     ABC [angstrom] 25.0 25.0 25.0
+    ALPHA_BETA_GAMMA 90.0 90.0 90.0
     PERIODIC NONE
   &END CELL
 ```
 
 - `ABC [angstrom] 25.0 25.0 25.0`  
-  Defines a cubic simulation box of side 25 Å.
+  Cell vector lengths (cubic box of side 25 Å).
+
+- `ALPHA_BETA_GAMMA 90.0 90.0 90.0`  
+  Cell angles (orthogonal cell).
 
 - `PERIODIC NONE`  
   Specifies a **non-periodic** (isolated) system.
