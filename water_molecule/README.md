@@ -65,7 +65,7 @@ The `&GLOBAL` section controls **how the calculation is run**.
 ```
 
 - `ABC [angstrom] 25.0 25.0 25.0`  
-  Cell vector lengths (cubic box of side 25 Å).
+  Cell vector lengths.
 
 - `ALPHA_BETA_GAMMA 90.0 90.0 90.0`  
   Cell angles (orthogonal cell).
