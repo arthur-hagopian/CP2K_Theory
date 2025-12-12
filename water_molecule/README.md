@@ -47,7 +47,10 @@ The `&GLOBAL` section controls **how the calculation is run**.
 `&FORCE_EVAL` defines **how energies and forces are evaluated**.
 
 - `METHOD Quickstep`  
-  Activates CP2K’s **Quickstep** module, which implements the **Gaussian and Plane Waves (GPW)** formalism.
+  Activates CP2K’s **Quickstep** module, which is the core engine for density-functional theory calculations in CP2K.  
+  Quickstep implements the **Gaussian and Plane Waves (GPW)** method, where Kohn–Sham orbitals are expanded in **localized Gaussian basis functions**, while the electronic density is mapped onto an **auxiliary plane-wave grid**.  
+
+  This mixed representation allows CP2K to treat systems with **thousands of atoms** efficiently: Gaussian functions keep the Hamiltonian sparse and enable linear-scaling techniques, while the plane-wave grid ensures an accurate and systematically convergent description of the electrostatics and exchange–correlation energy. As a result, Quickstep combines the efficiency of localized basis sets with much of the robustness of plane-wave approaches, making it particularly well suited for molecular dynamics and interfacial simulations.
 
 ---
 
@@ -65,7 +68,7 @@ The `&GLOBAL` section controls **how the calculation is run**.
 ```
 
 - `ABC [angstrom] 25.0 25.0 25.0`  
-  Cell vector lengths.
+  Cell vector lengths (cubic box of side 25 Å).
 
 - `ALPHA_BETA_GAMMA 90.0 90.0 90.0`  
   Cell angles (orthogonal cell).
