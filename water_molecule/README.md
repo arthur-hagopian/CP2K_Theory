@@ -167,7 +167,7 @@ Specifies the **total charge of the system**.
 Controls numerical settings specific to the **Gaussian and Plane Waves (GPW)** formalism.
 
 - `METHOD GPW`  
-  Selects the GPW scheme, in which Kohn–Sham orbitals are expanded in Gaussian basis functions while the electronic density is represented on a plane-wave grid.
+  Selects the GPW scheme, in which Kohn–Sham orbitals are expanded in Gaussian basis functions while the electronic density is represented on a plane-wave grid. Other Quickstep methods exist (e.g. `GAPW`, `RIGPW`, `OFGPW`, semiempirical and tight-binding variants), but `GPW` is the standard and most appropriate choice when Kohn–Sham orbitals and reliable DOS/PDOS are required.  
 
 - `EPS_DEFAULT`  
   Global numerical threshold controlling the accuracy of many internal operations (e.g. integral screening and matrix elements).  
