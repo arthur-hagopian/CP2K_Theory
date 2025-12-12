@@ -27,8 +27,7 @@ The `&GLOBAL` section controls **how the calculation is run**.
   `MEDIUM` is a good compromise: enough information to diagnose convergence without overwhelming the output file.
 
 - `RUN_TYPE ENERGY`  
-  Requests a **single-point energy calculation**, where the electronic structure is solved for fixed atomic positions and no ionic relaxation is performed.  
-  This run type is typically used to analyze electronic properties or to test numerical convergence.  
+  Requests a **single-point energy calculation**, where the electronic structure is solved for fixed atomic positions and no ionic relaxation is performed. This run type is typically used to analyze electronic properties or to test numerical convergence.  
   Alternatively, `RUN_TYPE GEO_OPT` activates a **geometry optimization**, in which atomic positions are iteratively updated until the forces vanish, according to the criteria defined in the `&MOTION / &GEO_OPT` section.
 
 ---
