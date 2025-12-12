@@ -29,11 +29,11 @@ The `&GLOBAL` section controls **how the calculation is run**.
 - `RUN_TYPE ENERGY`  
   Performs a **single-point energy calculation** at fixed atomic positions and cell parameters.
 
-  `RUN_TYPE ENERGY_FORCE` computes both the **total energy and atomic forces**, without updating positions, and is typically used to inspect forces or as a starting point for structural optimization.
+  `RUN_TYPE ENERGY_FORCE` performs a **single-point energy calculation** where both the **total energy and atomic forces** are computed.
 
   `RUN_TYPE GEO_OPT` activates a **geometry optimization**, where atomic positions are relaxed until the force-based convergence criteria defined in `&MOTION / &GEO_OPT` are satisfied.
 
-  `RUN_TYPE CELL_OPT` performs a **cell optimization**, in which both the **cell vectors and atomic positions** are optimized. This option is mainly relevant for periodic systems.
+  `RUN_TYPE CELL_OPT` performs a **cell optimization**, in which both the **cell vectors and atomic positions** are optimized.
 
 ---
 
