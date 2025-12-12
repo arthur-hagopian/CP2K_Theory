@@ -160,7 +160,6 @@ Specifies the **total charge of the system**.
 &QS
   METHOD GPW
   EPS_DEFAULT 1.0E-14
-  EPS_PGF_ORB 1.0E-14
 &END QS
 ```
 
@@ -172,10 +171,6 @@ Controls numerical settings specific to the **Gaussian and Plane Waves (GPW)** f
 - `EPS_DEFAULT`  
   Global numerical threshold controlling the accuracy of many internal operations (e.g. integral screening and matrix elements).  
   Tight values reduce numerical noise in the electronic structure, which is important for obtaining smooth and well-converged DOS/PDOS.
-
-- `EPS_PGF_ORB`  
-  Controls the accuracy of integrals involving primitive Gaussian functions and orbitals.  
-  Tightening this threshold improves the precision of orbital energies and projections, at the cost of increased computational effort.
 
 
 ---
