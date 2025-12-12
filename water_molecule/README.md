@@ -13,11 +13,11 @@ The full input discussed below is reproduced in the corresponding `input.inp` fi
 &GLOBAL
   PROJECT H2O
   PRINT_LEVEL MEDIUM
-  RUN_TYPE GEO_OPT
+  RUN_TYPE ENERGY
 &END GLOBAL
 ```
 
-The `&GLOBAL` section controls **how the calculation is run**, independently of the physical system.
+The `&GLOBAL` section controls **how the calculation is run**.
 
 - `PROJECT H2O`  
   Sets the project name. All output files will start with this prefix (e.g. `H2O.out`).
@@ -26,8 +26,11 @@ The `&GLOBAL` section controls **how the calculation is run**, independently of 
   Controls the verbosity of the output.  
   `MEDIUM` is a good compromise: enough information to diagnose convergence without overwhelming the output file.
 
-- `RUN_TYPE GEO_OPT`  
-  Requests a **geometry optimization**, i.e. ionic positions are relaxed until forces vanish.
+- `RUN_TYPE ENERGY`  
+  Requests a **single-point energy calculation**, where the electronic structure is solved for fixed atomic positions and no ionic relaxation is performed.  
+  This run type is typically used to analyze electronic properties or to test numerical convergence.
+
+  Alternatively, `RUN_TYPE GEO_OPT` activates a **geometry optimization**, in which atomic positions are iteratively updated until the forces vanish, according to the criteria defined in the `&MOTION / &GEO_OPT` section.
 
 ---
 
