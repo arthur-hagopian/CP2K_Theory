@@ -114,10 +114,14 @@ The `&GLOBAL` section controls **how the calculation is run**.
 Each `&KIND` block defines how a given chemical element is treated.
 
 - `BASIS_SET TZV2P-MOLOPT-GTH`  
-  Triple-zeta valence basis set with polarization, optimized for molecular systems.
+  Specifies a **triple-zeta valence Gaussian basis set with two polarization functions**.  
+  “Triple-zeta” means that each valence orbital is described by three basis functions, allowing for a flexible description of bonding and charge redistribution.  
+  The **MOLOPT** (molecularly optimized) basis sets are optimized to provide a good balance between accuracy and efficiency for molecules and condensed-phase systems, making them well suited for molecular dynamics and interfacial simulations.
 
 - `POTENTIAL GTH-PBE-qX`  
-  GTH pseudopotentials consistent with the PBE functional.
+  Specifies a **Goedecker–Teter–Hutter (GTH) norm-conserving pseudopotential** constructed consistently with the PBE exchange–correlation functional.  
+  Core electrons are replaced by an effective potential, reducing the number of explicitly treated electrons and thus the computational cost, while retaining an accurate description of valence electronic structure.  
+  The label `qX` indicates the number of valence electrons treated explicitly (e.g. `q6` for O, `q1` for H).
 
 ---
 
