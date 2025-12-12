@@ -198,7 +198,19 @@ Uses a wavelet-based Poisson solver suitable for isolated systems.
 &END MGRID
 ```
 
-Controls the plane-wave grids used to represent the electron density.
+Controls the **real-space multigrid representation** of the electronic density in the GPW formalism.
+
+- `CUTOFF`  
+  Sets the plane-wave cutoff (in Ry) of the **finest grid** used to represent the electron density.  
+  Higher values increase spatial resolution and improve the accuracy of energies and electronic states, which is important for converged DOS/PDOS calculations.
+
+- `REL_CUTOFF`  
+  Defines the cutoff for the coarser auxiliary grids relative to the finest one.  
+  This parameter controls the balance between computational efficiency and numerical accuracy in the multigrid scheme.
+
+- `NGRIDS`  
+  Specifies the number of grids used in the multigrid hierarchy.  
+  Multiple grids allow CP2K to efficiently treat both smooth and rapidly varying components of the electron density.
 
 ---
 
