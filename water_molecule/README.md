@@ -225,7 +225,27 @@ Controls the **real-space multigrid representation** of the electronic density i
   CHOLESKY RESTORE
 ```
 
-Defines how the electronic self-consistency cycle is performed.
+Defines how the **self-consistent field (SCF)** cycle is performed, i.e. how the electronic density is iteratively converged.
+
+- `SCF_GUESS ATOMIC`  
+  Initializes the electronic density as a superposition of isolated atomic densities.  
+  This provides a stable and physically meaningful starting point for molecular and interfacial systems.
+
+- `EPS_SCF`  
+  Convergence threshold for the SCF cycle, typically based on the change in total energy or density between iterations.  
+  Tight values reduce numerical noise in orbital energies and are important for obtaining smooth and well-converged DOS/PDOS.
+
+- `MAX_SCF`  
+  Maximum number of SCF iterations allowed before the calculation is aborted.  
+  Larger values increase robustness for difficult cases but do not affect the final converged solution.
+
+- `ADDED_MOS`  
+  Adds extra unoccupied molecular orbitals beyond those required by the electron count.  
+  This improves numerical stability and is particularly important when analyzing unoccupied states and the conduction-band region of the DOS.
+
+- `CHOLESKY RESTORE`  
+  Uses a Cholesky decomposition of the overlap matrix to improve numerical stability and efficiency of the SCF procedure.
+
 
 ---
 
