@@ -36,7 +36,7 @@ For oxygen, the **deep valence state** around −18 eV is dominated by **s-chara
 
 For hydrogen, the PDOS is almost entirely of **s-character**, as expected from the H 1s atomic orbitals. Hydrogen contributions appear both in bonding states at negative energies and in antibonding states at positive energies, while p- and d-character remain minimal and originate solely from basis-set polarization functions.
 
-## Comparison to experiment
+## Comparison to experimental measurements
 
 Blabla
 
