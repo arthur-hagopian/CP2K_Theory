@@ -43,7 +43,7 @@ The computed MOs can be vizuliazed, as shown in Figure 3.
 </p>
 
 <p align="center">
-  Figure 3 — Vizualization of the MOs of an isolated H₂O molecule.
+  Figure 3 — Vizualization of the computed MOs of an isolated H₂O molecule.
 </p>
 
 
