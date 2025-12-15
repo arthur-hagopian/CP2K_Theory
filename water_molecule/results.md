@@ -3,7 +3,7 @@
 This ssection presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed using CP2K.
 
 <p align="center">
-  <img src="images/01_PDOS_spd.png" width="80%">
+  <img src="images/01_PDOS_spds.png" width="80%">
 </p>
 
 <p align="center">
