@@ -45,18 +45,26 @@ The computed molecular orbitals (MOs), printed from the CP2K output using the `M
 </p>
 
 <p align="center">
-  Figure 1 — Vizualization of the computed MOs of an isolated H₂O molecule.
+  Figure 3 — Vizualization of the computed MOs of an isolated H₂O molecule.
 </p>
 
 The lowest-lying **2a₁** orbital is largely bonding and delocalized over the molecule, consistent with its σ-type character. The **1b₂** and **3a₁** orbitals arise from combinations of O 2p and H 1s atomic orbitals and exhibit the expected bonding symmetry with respect to the molecular plane. The **1b₁** orbital corresponds to a non-bonding oxygen-centered state, showing the characteristic lone-pair shape oriented perpendicular to the molecular plane.
 
-The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding character, with nodes along the O–H bonds, in agreement with their assignment as σ* and π*-like states in standard MO theory. Overall, this visualization confirms that the electronic structure obtained from CP2K is fully consistent with the qualitative picture provided by molecular orbital theory, while providing a quantitative, first-principles description of the orbitals.
-
-
+The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding character, with nodes along the O–H bonds, in agreement with their assignment as σ* and π*-like states in standard MO theory. Overall, this visualization confirms that the electronic structure obtained from CP2K is fully consistent with the qualitative picture provided by molecular orbital theory.
 
 ## Comparison to experimental measurements
 
-Blabla
+**Table 1 — Molecular orbitals of the H₂O molecule and their qualitative character. Energies are referenced to the 1b₁ level.**
+
+| MO label | Character        | Dominant atom (orbital) | E − E₁b₁ (eV) | E − E₁b₁ exp. (eV) [1] |
+|---------:|:-----------------|:------------------------|--------------:|----------------------:|
+| 2a₁      | bonding          | O + H (s)               | −18.3         | −20.0                 |
+| 1b₂      | bonding          | O (p)                   | −5.7          | −6.2                  |
+| 3a₁      | bonding          | O (p)                   | −3.2          | −2.2                  |
+| 1b₁      | non-bonding      | O (p)                   |  0.0          |  0.0                  |
+| 4a₁      | antibonding      | H (s)                   |  8.1          |  –                    |
+| 2b₂      | antibonding      | H (s)                   | 10.5          |  –                    |
+
 
 ## Impact of the `BASIS_SET` parameter
 
