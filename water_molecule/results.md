@@ -4,16 +4,10 @@ This section presents the **projected density of states (PDOS)** for a **single 
 
 In the following sections, several key parameters are systematically varied, namely `BASIS_SET`, `CUTOFF`, `EPS_SCF`, and `XC_FUNCTIONAL`, in order to assess their respective impact on the computed PDOS.
 
-<p align="center">
-  <img src="images/01_PDOS_O_H.png" width="80%">
-</p>
-
-<p align="center">
-  Figure 1 — PDOS (projected on the different atom types) of an isolated H₂O molecule.
-</p>
-
 ## PDOS of a single water molecule
 
+The PDOS is first decomposed into atomic-type contributions (O and H).
+
 <p align="center">
   <img src="images/01_PDOS_O_H.png" width="80%">
 </p>
@@ -21,8 +15,6 @@ In the following sections, several key parameters are systematically varied, nam
 <p align="center">
   Figure 1 — PDOS (projected on the different atom types) of an isolated H₂O molecule.
 </p>
-
-The PDOS is first decomposed into atomic-type contributions (O and H).
 
 - The **occupied molecular orbitals** (e.g. 1b₂, 3a₁, 1b₁) appear at negative energies relative to the Fermi level and are dominated by **O p-character**, as expected for water.
 - The **deep valence state** (2a₁) shows a strong **s-character**, reflecting its largely O 2s nature.
