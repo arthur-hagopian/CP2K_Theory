@@ -159,7 +159,7 @@ Specifies the **total charge of the system**.
 ```text
 &QS
   METHOD GPW
-  EPS_DEFAULT 1.0E-14
+  EPS_DEFAULT 1.0E-12
 &END QS
 ```
 
@@ -219,7 +219,7 @@ Controls the **real-space multigrid representation** of the electronic density i
 ```text
 &SCF
   SCF_GUESS ATOMIC
-  EPS_SCF 1.0E-8
+  EPS_SCF 1.0E-6
   MAX_SCF 200
   ADDED_MOS 5
   CHOLESKY RESTORE
@@ -289,31 +289,32 @@ Adds long-range dispersion interactions using the DFT-D3 correction.
     TYPE MINIMIZATION
     OPTIMIZER BFGS
     MAX_ITER 200
-    MAX_FORCE [eV/angstrom] 1.0E-4
-    RMS_FORCE [eV/angstrom] 5.0E-5
+    MAX_FORCE [eV/angstrom] 1.0E-3
+    RMS_FORCE [eV/angstrom] 5.0E-4
+    MAX_DR    [angstrom]    1.0E-2
+    RMS_DR    [angstrom]    5.0E-3
   &END GEO_OPT
 &END MOTION
 ```
 
-The `&MOTION` section controls **ionic motion**, i.e. how atomic positions are updated.
+The `&MOTION` section controls **ionic motion**, i.e. how atomic positions are updated during the calculation.
 
 - `TYPE MINIMIZATION`  
-  Specifies that a geometry optimization (energy minimization) is performed, consistent with `RUN_TYPE GEO_OPT`.
+  Specifies that a geometry optimization is performed, consistent with `RUN_TYPE GEO_OPT`.
 
 - `OPTIMIZER BFGS`  
-  Uses the **Broyden–Fletcher–Goldfarb–Shanno (BFGS)** quasi-Newton algorithm.  
-  This is a robust and efficient optimizer for small molecular systems.
+  Uses the BFGS quasi-Newton algorithm, which efficiently updates atomic positions using an approximate Hessian.
 
-- `MAX_ITER 200`  
+- `MAX_ITER`  
   Maximum number of geometry optimization steps.
 
-- `MAX_FORCE [eV/angstrom] 1.0E-4`  
-  Convergence criterion on the **maximum atomic force**.  
-  The optimization stops when the largest force component falls below this threshold.
+- `MAX_FORCE` and `RMS_FORCE`  
+  Convergence criteria based on the maximum and root-mean-square atomic forces, respectively.  
+  These thresholds ensure that residual forces on the atoms are sufficiently small.
 
-- `RMS_FORCE [eV/angstrom] 5.0E-5`  
-  Convergence criterion on the **root-mean-square force** over all atoms.  
-  Using both `MAX_FORCE` and `RMS_FORCE` ensures a well-relaxed molecular geometry.
+- `MAX_DR` and `RMS_DR`  
+  Convergence criteria based on the maximum and root-mean-square atomic displacements between optimization steps.  
+  Including displacement-based criteria prevents premature convergence when forces are small but atomic positions are still evolving.
 
 ---
 
