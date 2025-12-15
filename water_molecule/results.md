@@ -39,6 +39,13 @@ This orbital-resolved analysis highlights the distinct roles of oxygen and hydro
 
 ## Impact of the `CUTOFF` parameter
 
+<p align="center">
+  <img src="images/02_PDOS_CUTOFF.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 3 — PDOS (projected on the O atom) of an isolated H₂O molecule for varying `CUTOFF` CP2K parameter.
+</p>
 
 
 
