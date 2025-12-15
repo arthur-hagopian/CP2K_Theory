@@ -56,14 +56,14 @@ The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding charac
 
 **Table 1 — Molecular orbitals of the H₂O molecule and their qualitative character. Energies are referenced to the 1b₁ level.**
 
-| MO label | Character        | Dominant atom (orbital) | E − E₁b₁ (eV) | E − E₁b₁ exp. (eV) [1] |
-|---------:|:-----------------|:------------------------|--------------:|----------------------:|
-| 2a₁      | bonding          | O + H (s)               | −18.3         | −20.0                 |
-| 1b₂      | bonding          | O (p)                   | −5.7          | −6.2                  |
-| 3a₁      | bonding          | O (p)                   | −3.2          | −2.2                  |
-| 1b₁      | non-bonding      | O (p)                   |  0.0          |  0.0                  |
-| 4a₁      | antibonding      | H (s)                   |  8.1          |  –                    |
-| 2b₂      | antibonding      | H (s)                   | 10.5          |  –                    |
+| MO label | Character        | Dominant atom (orbital) | E − E1b₁ (eV) | E − E1b₁ exp. (eV) [1] |
+|---------:|:-----------------|:------------------------|--------------:|-----------------------:|
+| 2a₁      | bonding          | O + H (s)               | −18.3         | −20.0                  |
+| 1b₂      | bonding          | O (p)                   | −5.7          | −6.2                   |
+| 3a₁      | bonding          | O (p)                   | −3.2          | −2.2                   |
+| 1b₁      | non-bonding      | O (p)                   |  0.0          |  0.0                   |
+| 4a₁      | antibonding      | H (s)                   |  8.1          |  –                     |
+| 2b₂      | antibonding      | H (s)                   | 10.5          |  –                     |
 
 
 ## Impact of the `BASIS_SET` parameter
