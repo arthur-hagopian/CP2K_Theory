@@ -13,7 +13,7 @@ The PDOS is first decomposed into atomic-type contributions (O and H).
 </p>
 
 <p align="center">
-  Figure 1 — PDOS (projected on the different atom types) of an isolated H₂O molecule.
+  Figure 1 — PDOS (projected per atom-type) of an isolated H₂O molecule.
 </p>
 
 Blabla
@@ -23,7 +23,7 @@ Blabla
 </p>
 
 <p align="center">
-  Figure 2 — PDOS of an isolated H₂O molecule. Energies are referenced to the Fermi level.</em>
+  Figure 2 — PDOS (projected per orbital-type) of an isolated H₂O molecule for (left) O, and (right) H atoms.
 </p>
 
 - The **occupied molecular orbitals** (e.g. 1b₂, 3a₁, 1b₁) appear at negative energies relative to the Fermi level and are dominated by **O p-character**, as expected for water.
