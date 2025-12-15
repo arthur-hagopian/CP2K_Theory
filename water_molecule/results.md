@@ -12,9 +12,17 @@ In the following sections, several key parameters are systematically varied, nam
   Figure 1 — PDOS (projected on the different atom types) of an isolated H₂O molecule.
 </p>
 
-## Description
+## PDOS of a single water molecule
 
-The PDOS is decomposed into atomic-orbital contributions (s, p, and d), allowing a clear identification of the molecular orbitals of water:
+<p align="center">
+  <img src="images/01_PDOS_O_H.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 1 — PDOS (projected on the different atom types) of an isolated H₂O molecule.
+</p>
+
+The PDOS is first decomposed into atomic-type contributions (O and H).
 
 - The **occupied molecular orbitals** (e.g. 1b₂, 3a₁, 1b₁) appear at negative energies relative to the Fermi level and are dominated by **O p-character**, as expected for water.
 - The **deep valence state** (2a₁) shows a strong **s-character**, reflecting its largely O 2s nature.
