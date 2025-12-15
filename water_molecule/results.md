@@ -1,4 +1,4 @@
-# Results: single water molecule
+# Results - Single water molecule
 
 This section presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed using CP2K.
 
