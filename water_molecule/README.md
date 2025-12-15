@@ -19,7 +19,7 @@ The full input discussed below is reproduced in the corresponding `input.inp` fi
 &END GLOBAL
 ```
 
-The `&GLOBAL` section controls **what type of calculation is run**.
+The `&GLOBAL` section controls **how the calculation is run**.
 
 - `PROJECT H2O`  
   Sets the project name. All output files will start with this prefix (e.g. `H2O.out`).
