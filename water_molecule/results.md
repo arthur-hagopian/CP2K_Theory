@@ -57,6 +57,26 @@ This orbital-resolved analysis highlights the distinct roles of oxygen and hydro
   Figure 4 — PDOS (projected on the O atom) of an isolated H₂O molecule for a varying **CUTOFF** CP2K parameter.
 </p>
 
+## Impact of the `EPS_SCF` parameter
+
+<p align="center">
+  <img src="images/04_PDOS_EPS_SCF.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 5 — PDOS (projected on the O atom) of an isolated H₂O molecule for a varying **EPS_SCF** CP2K parameter.
+</p>
+
+## Impact of the `XC_FUNCTIONAL` parameter
+
+<p align="center">
+  <img src="images/05_PDOS_XC_FUNCTIONAL.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 6 — PDOS (projected on the O atom) of an isolated H₂O molecule for a varying **XC_FUNCTIONAL** CP2K parameter.
+</p>
+
 
 
 
