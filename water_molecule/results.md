@@ -7,7 +7,7 @@ This section presents the **projected density of states (PDOS)** for a **single 
 </p>
 
 <p align="center">
-  Figure 1 — s-, p-, and d-projected density of states (PDOS) of an isolated H₂O molecule. Energies are referenced to the Fermi level.</em>
+  Figure 1 — Projected density of states (PDOS) of an isolated H₂O molecule. Energies are referenced to the Fermi level.</em>
 </p>
 
 ## Description
