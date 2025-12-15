@@ -15,7 +15,7 @@ The labels used to denote the different molecular orbitals (MOs), e.g. 2a₁, 1b
 </p>
 
 <p align="center">
-  Figure 1 — PDOS (projected per atom-type) of an isolated H₂O molecule.
+  Figure 1 — PDOS projected per atom-type of an isolated H₂O molecule.
 </p>
 
 Among the **occupied states** at negative energies, the deep-lying **2a₁** orbital exhibits a mixed contribution from both oxygen and hydrogen atoms, reflecting its bonding character involving O–H interactions. The valence orbitals **1b₂** and **3a₁** are dominated by oxygen character with a smaller hydrogen contribution, consistent with O–H bonding and hybridization. The **highest occupied molecular orbital (HOMO)**, labeled **1b₁**, is almost entirely oxygen-centered, in agreement with its largely non-bonding O 2p character.
@@ -27,7 +27,7 @@ At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂*
 </p>
 
 <p align="center">
-  Figure 2 — PDOS (projected per orbital-type) of an isolated H₂O molecule for (left) O, and (right) H atoms.
+  Figure 2 — PDOS projected per orbital-type of an isolated H₂O molecule for (left) O, and (right) H atoms.
 </p>
 
 Figure 2 shows the **orbital-resolved PDOS**, decomposed into **s**, **p**, and **d** contributions, separately for the **oxygen atom (left)** and the **hydrogen atoms (right)**.
