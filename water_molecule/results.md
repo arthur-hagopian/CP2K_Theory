@@ -62,8 +62,8 @@ The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding charac
 | 1b₂      | bonding          | O (p)                   | −5.9                | −6.2                   |
 | 3a₁      | bonding          | O (p)                   | −2.1                | −2.2                   |
 | 1b₁      | non-bonding      | O (p)                   |  0.0                |  0.0                   |
-| 4a₁      | antibonding      | H (s)                   |  8.1                |  –                     |
-| 2b₂      | antibonding      | H (s)                   | 10.5                |  –                     |
+| 4a₁      | antibonding      | H (s)                   |  7.3                |  –                     |
+| 2b₂      | antibonding      | H (s)                   | 10.1                |  –                     |
 
 
 ## Impact of the `BASIS_SET` parameter
