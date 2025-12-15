@@ -28,9 +28,14 @@ At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂*
   Figure 2 — PDOS (projected per orbital-type) of an isolated H₂O molecule for (left) O, and (right) H atoms.
 </p>
 
-- The **occupied molecular orbitals** (e.g. 1b₂, 3a₁, 1b₁) appear at negative energies relative to the Fermi level and are dominated by **O p-character**, as expected for water.
-- The **deep valence state** (2a₁) shows a strong **s-character**, reflecting its largely O 2s nature.
-- At positive energies, a set of **unoccupied states** is visible. These correspond to antibonding molecular orbitals and to additional **artificial (added) MOs** included to stabilize the SCF procedure and enable analysis of the unoccupied DOS.
+Figure 2 shows the **orbital-resolved PDOS**, decomposed into **s**, **p**, and **d** contributions, separately for the **oxygen atom (left)** and the **hydrogen atoms (right)**.
+
+For oxygen, the **deep valence state** around −18 eV is dominated by **s-character**, corresponding to the O 2s contribution to the **2a₁** molecular orbital. The valence region closer to the Fermi level is largely governed by **p-character**, reflecting the central role of O 2p orbitals in forming the bonding (**1b₂**, **3a₁**) and non-bonding (**1b₁**) molecular orbitals of water. Only negligible d-character is observed, arising from polarization functions in the basis set rather than true atomic d states.
+
+For hydrogen, the PDOS is almost entirely of **s-character**, as expected from the H 1s atomic orbitals. Hydrogen contributions appear both in bonding states at negative energies and in antibonding states at positive energies, while p- and d-character remain minimal and originate solely from basis-set polarization functions.
+
+This orbital-resolved analysis highlights the distinct roles of oxygen and hydrogen atomic orbitals in shaping the electronic structure of water, and provides a clear basis for interpreting how basis-set choice and projection schemes affect DOS and PDOS calculations in CP2K.
+
 
 ## Impact of the 'CUTOFF' parameter
 
