@@ -6,30 +6,6 @@ In the following sections, several key parameters are systematically varied, nam
 
 ## PDOS of a single water molecule
 
-The computed molecular orbitals (MOs), printed from the CP2K output using the `MO_CUBES` tag, can be visualized as shown in Figure 3. The spatial shapes and nodal structures of these orbitals closely match the expectations from a **molecular orbital diagram** constructed using a **fragment (LCAO) approach**.
-
-The labels used to denote the different molecular orbitals (MOs), e.g. 2a₁, 1b₂, 3a₁, originate from **group-theory**. Specifically, they correspond to the **irreducible representations of the C₂v group**, which is the symmetry group of the H₂O molecule in its equilibrium geometry. The letters (a₁, b₁, b₂) indicate the symmetry of the molecular orbitals with respect to the symmetry operations of the C₂v group, while the leading number labels orbitals of the same symmetry in order of increasing energy.
-
-<p align="center">
-  <img src="images/MOs.png" width="80%">
-</p>
-
-<p align="center">
-  Figure 1 — Vizualization of the computed MOs of an isolated H₂O molecule.
-</p>
-
-The lowest-lying **2a₁** orbital is largely bonding and delocalized over the molecule, consistent with its σ-type character. The **1b₂** and **3a₁** orbitals arise from combinations of O 2p and H 1s atomic orbitals and exhibit the expected bonding symmetry with respect to the molecular plane. The **1b₁** orbital corresponds to a non-bonding oxygen-centered state, showing the characteristic lone-pair shape oriented perpendicular to the molecular plane. 
-
-The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding character, with nodes along the O–H bonds, in agreement with their assignment as σ* and π*-like states in standard MO theory. Overall, this visualization confirms that the electronic structure obtained from CP2K is fully consistent with the qualitative picture provided by molecular orbital theory, while providing a quantitative, first-principles description of the orbitals.
-
-<p align="center">
-  <img src="images/MOs.png" width="80%">
-</p>
-
-<p align="center">
-  Figure 3 — Vizualization of the computed MOs of an isolated H₂O molecule.
-</p>
-
 Figure 1 shows the **projected density of states (PDOS)** of an isolated H₂O molecule, decomposed into contributions from **oxygen (O)** and **hydrogen (H)** atoms. Energies are referenced to the Fermi level, which in CP2K is defined as the energy of the **highest occupied molecular orbital (HOMO)** for finite, non-periodic systems.
 
 <p align="center">
@@ -57,6 +33,25 @@ Figure 2 shows the **orbital-resolved PDOS**, decomposed into **s**, **p**, and 
 For oxygen, the **deep valence state** around −18 eV is dominated by **s-character**, corresponding to the O 2s contribution to the **2a₁** molecular orbital. The valence region closer to the Fermi level is largely governed by **p-character**, reflecting the central role of O 2p orbitals in forming the bonding (**1b₂**, **3a₁**) and non-bonding (**1b₁**) molecular orbitals of water. Only negligible d-character is observed, arising from polarization functions in the basis set rather than true atomic d states.
 
 For hydrogen, the PDOS is almost entirely of **s-character**, as expected from the H 1s atomic orbitals. Hydrogen contributions appear both in bonding states at negative energies and in antibonding states at positive energies, while p- and d-character remain minimal and originate solely from basis-set polarization functions.
+
+
+
+The computed molecular orbitals (MOs), printed from the CP2K output using the `MO_CUBES` tag, can be visualized as shown in Figure 3. The spatial shapes and nodal structures of these orbitals closely match the expectations from a **molecular orbital diagram** constructed using a **fragment (LCAO) approach**.
+
+The labels used to denote the different molecular orbitals (MOs), e.g. 2a₁, 1b₂, 3a₁, originate from **group-theory**. Specifically, they correspond to the **irreducible representations of the C₂v group**, which is the symmetry group of the H₂O molecule in its equilibrium geometry. The letters (a₁, b₁, b₂) indicate the symmetry of the molecular orbitals with respect to the symmetry operations of the C₂v group, while the leading number labels orbitals of the same symmetry in order of increasing energy.
+
+<p align="center">
+  <img src="images/MOs.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 1 — Vizualization of the computed MOs of an isolated H₂O molecule.
+</p>
+
+The lowest-lying **2a₁** orbital is largely bonding and delocalized over the molecule, consistent with its σ-type character. The **1b₂** and **3a₁** orbitals arise from combinations of O 2p and H 1s atomic orbitals and exhibit the expected bonding symmetry with respect to the molecular plane. The **1b₁** orbital corresponds to a non-bonding oxygen-centered state, showing the characteristic lone-pair shape oriented perpendicular to the molecular plane.
+
+The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding character, with nodes along the O–H bonds, in agreement with their assignment as σ* and π*-like states in standard MO theory. Overall, this visualization confirms that the electronic structure obtained from CP2K is fully consistent with the qualitative picture provided by molecular orbital theory, while providing a quantitative, first-principles description of the orbitals.
+
 
 
 ## Comparison to experimental measurements
