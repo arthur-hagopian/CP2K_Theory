@@ -20,7 +20,7 @@ The labels used to denote the different molecular orbitals (e.g. 2a₁, 1b₂, 3
 
 Among the **occupied states** at negative energies, the deep-lying **2a₁** orbital exhibits a mixed contribution from both oxygen and hydrogen atoms, reflecting its bonding character involving O–H interactions. The valence orbitals **1b₂** and **3a₁** are dominated by oxygen character with a smaller hydrogen contribution, consistent with O–H bonding and hybridization. The **highest occupied molecular orbital (HOMO)**, labeled **1b₁**, is almost entirely oxygen-centered, in agreement with its largely non-bonding O 2p character.
 
-At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂**) become visible. These states exhibit increased hydrogen character, reflecting their antibonding nature. At higher energies, additional peaks appear that correspond to **artificial (added) molecular orbitals**, which are included to stabilize the SCF procedure and to enable analysis of the unoccupied part of the PDOS.
+At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂**) become visible and exhibit increased hydrogen character, reflecting their antibonding nature. At higher energies, additional peaks appear that correspond to **artificial (added) molecular orbitals**, which arise from the use of the `ADDED_MOS 5` tag in the input. These extra states are included to stabilize the SCF procedure and to enable a meaningful analysis of the unoccupied part of the PDOS.
 
 <p align="center">
   <img src="images/01_PDOS_O_H_spd.png" width="80%">
