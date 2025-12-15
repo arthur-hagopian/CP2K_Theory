@@ -1,13 +1,13 @@
 # Results: single water molecule
 
-This ssection presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed using CP2K.
+This section presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed using CP2K.
 
 <p align="center">
-  <img src="images/01_PDOS_spds.png" width="80%">
+  <img src="images/01_PDOS_spd.png" width="80%">
 </p>
 
 <p align="center">
-  <em>Figure 1 — s-, p-, and d-projected density of states (PDOS) of an isolated H₂O molecule. Energies are referenced to the Fermi level.</em>
+  Figure 1 — s-, p-, and d-projected density of states (PDOS) of an isolated H₂O molecule. Energies are referenced to the Fermi level.</em>
 </p>
 
 ## Description
