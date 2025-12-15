@@ -54,13 +54,13 @@ The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding charac
 
 ## Comparison to experimental measurements
 
-**Table 1 — Molecular orbitals of the H₂O molecule and their qualitative character. Energies are referenced to the 1b₁ level.**
+**Table 1 — Molecular orbitals of the H₂O molecule and their qualitative character. Energies are referenced to the 1b₁ level and are compared to experimental measurements from Ref. [1].**
 
 | MO label | Character        | Dominant atom (orbital) | E − E1b₁ comp. (eV) | E − E1b₁ exp. (eV) [1] |
 |---------:|:-----------------|:------------------------|--------------------:|-----------------------:|
-| 2a₁      | bonding          | O + H (s)               | −18.3               | −20.0                  |
-| 1b₂      | bonding          | O (p)                   | −5.7                | −6.2                   |
-| 3a₁      | bonding          | O (p)                   | −3.2                | −2.2                   |
+| 2a₁      | bonding          | O + H (s)               | −18.1               | −20.0                  |
+| 1b₂      | bonding          | O (p)                   | −5.9                | −6.2                   |
+| 3a₁      | bonding          | O (p)                   | −2.1                | −2.2                   |
 | 1b₁      | non-bonding      | O (p)                   |  0.0                |  0.0                   |
 | 4a₁      | antibonding      | H (s)                   |  8.1                |  –                     |
 | 2b₂      | antibonding      | H (s)                   | 10.5                |  –                     |
@@ -107,5 +107,9 @@ The unoccupied orbitals **4a₁** and **2b₂** display clear antibonding charac
 </p>
 
 
+## References
 
+[1] B. Winter, R. Weber, W. Widdra, M. Dittmar, M. Faubel, and I. V. Hertel,  
+*Full Valence Band Photoemission from Liquid Water Using EUV Synchrotron Radiation*,  
+**J. Phys. Chem. A** **108**, 2625–2632 (2004).
 
