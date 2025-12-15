@@ -9,21 +9,21 @@ In the following sections, several key parameters are systematically varied, nam
 Figure 1 shows the **projected density of states (PDOS)** of an isolated H₂O molecule, decomposed into contributions from **oxygen (O)** and **hydrogen (H)** atoms. Energies are referenced to the Fermi level, which in CP2K is defined as the energy of the **highest occupied molecular orbital (HOMO)** for finite, non-periodic systems.
 
 <p align="center">
-  <img src="images/01_PDOS_O_H.png" width="80%">
+  <img src="images/PDOS_O_H.png" width="80%">
 </p>
 
 <p align="center">
   Figure 1 — PDOS (projected per atom-type) of an isolated H₂O molecule.
 </p>
 
-The labels used to denote the different molecular orbitals (e.g. 2a₁, 1b₂, 3a₁, 1b₁) originate from **group-theoretical symmetry analysis**. Specifically, they correspond to the **irreducible representations of the C₂v group**, which is the symmetry group of the H₂O molecule in its equilibrium geometry. The letters (a₁, b₁, b₂) indicate the symmetry of the molecular orbitals with respect to the symmetry operations of the C₂v group, while the leading number labels orbitals of the same symmetry in order of increasing energy.
+The labels used to denote the different molecular orbitals (MOs), e.g. 2a₁, 1b₂, 3a₁, originate from **group-theoretical symmetry analysis**. Specifically, they correspond to the **irreducible representations of the C₂v group**, which is the symmetry group of the H₂O molecule in its equilibrium geometry. The letters (a₁, b₁, b₂) indicate the symmetry of the molecular orbitals with respect to the symmetry operations of the C₂v group, while the leading number labels orbitals of the same symmetry in order of increasing energy.
 
 Among the **occupied states** at negative energies, the deep-lying **2a₁** orbital exhibits a mixed contribution from both oxygen and hydrogen atoms, reflecting its bonding character involving O–H interactions. The valence orbitals **1b₂** and **3a₁** are dominated by oxygen character with a smaller hydrogen contribution, consistent with O–H bonding and hybridization. The **highest occupied molecular orbital (HOMO)**, labeled **1b₁**, is almost entirely oxygen-centered, in agreement with its largely non-bonding O 2p character.
 
 At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂**) become visible and exhibit increased hydrogen character, reflecting their antibonding nature. At higher energies, additional peaks appear that correspond to **artificial (added) molecular orbitals**, which arise from the use of the `ADDED_MOS 5` tag in the input. These extra states are included to stabilize the SCF procedure and to enable a meaningful analysis of the unoccupied part of the PDOS.
 
 <p align="center">
-  <img src="images/01_PDOS_O_H_spd.png" width="80%">
+  <img src="images/PDOS_O_H_spd.png" width="80%">
 </p>
 
 <p align="center">
@@ -36,6 +36,17 @@ For oxygen, the **deep valence state** around −18 eV is dominated by **s-chara
 
 For hydrogen, the PDOS is almost entirely of **s-character**, as expected from the H 1s atomic orbitals. Hydrogen contributions appear both in bonding states at negative energies and in antibonding states at positive energies, while p- and d-character remain minimal and originate solely from basis-set polarization functions.
 
+The computed MOs can be vizuliazed, as shown in Figure 3.
+
+<p align="center">
+  <img src="images/MOs.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 3 — Vizualization of the MOs of an isolated H₂O molecule.
+</p>
+
+
 ## Comparison to experimental measurements
 
 Blabla
@@ -43,7 +54,7 @@ Blabla
 ## Impact of the `BASIS_SET` parameter
 
 <p align="center">
-  <img src="images/02_PDOS_BASIS_SET.png" width="80%">
+  <img src="images/PDOS_BASIS_SET.png" width="80%">
 </p>
 
 <p align="center">
@@ -53,7 +64,7 @@ Blabla
 ## Impact of the `CUTOFF` parameter
 
 <p align="center">
-  <img src="images/03_PDOS_CUTOFF.png" width="80%">
+  <img src="images/PDOS_CUTOFF.png" width="80%">
 </p>
 
 <p align="center">
@@ -63,7 +74,7 @@ Blabla
 ## Impact of the `EPS_SCF` parameter
 
 <p align="center">
-  <img src="images/04_PDOS_EPS_SCF.png" width="80%">
+  <img src="images/PDOS_EPS_SCF.png" width="80%">
 </p>
 
 <p align="center">
@@ -73,7 +84,7 @@ Blabla
 ## Impact of the `XC_FUNCTIONAL` parameter
 
 <p align="center">
-  <img src="images/05_PDOS_XC_FUNCTIONAL.png" width="80%">
+  <img src="images/PDOS_XC_FUNCTIONAL.png" width="80%">
 </p>
 
 <p align="center">
