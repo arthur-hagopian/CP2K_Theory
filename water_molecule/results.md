@@ -37,15 +37,26 @@ For hydrogen, the PDOS is almost entirely of **s-character**, as expected from t
 This orbital-resolved analysis highlights the distinct roles of oxygen and hydrogen atomic orbitals in shaping the electronic structure of water, and provides a clear basis for interpreting how basis-set choice and projection schemes affect DOS and PDOS calculations in CP2K.
 
 
+## Impact of the `BASIS_SET` parameter
+
+<p align="center">
+  <img src="images/02_PDOS_BASIS_SET.png" width="80%">
+</p>
+
+<p align="center">
+  Figure 3 — PDOS (projected on the O atom) of an isolated H₂O molecule for a varying **BASIS_SET** CP2K parameter.
+</p>
+
 ## Impact of the `CUTOFF` parameter
 
 <p align="center">
-  <img src="images/02_PDOS_CUTOFF.png" width="80%">
+  <img src="images/03_PDOS_CUTOFF.png" width="80%">
 </p>
 
 <p align="center">
-  Figure 3 — PDOS (projected on the O atom) of an isolated H₂O molecule for varying `CUTOFF` CP2K parameter.
+  Figure 4 — PDOS (projected on the O atom) of an isolated H₂O molecule for a varying **CUTOFF** CP2K parameter.
 </p>
+
 
 
 
