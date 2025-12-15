@@ -16,7 +16,7 @@ Figure 1 shows the PDOS of an isolated H₂O molecule, decomposed into contribut
   Figure 1 — PDOS (projected per atom-type) of an isolated H₂O molecule.
 </p>
 
-The **occupied states** at negative energies correspond to the well-known molecular orbitals of water. The deep-lying **2a₁** state is dominated by oxygen character, reflecting its largely O 2s nature. The valence orbitals **1b₂** and **3a₁** show strong oxygen contributions with a smaller hydrogen component, consistent with O–H bonding and hybridization. The **highest occupied molecular orbital (HOMO)**, labeled **1b₁**, is almost entirely oxygen-centered, in agreement with its non-bonding O 2p character.
+The **occupied states** at negative energies correspond to the well-known molecular orbitals of water. The deep-lying **2a₁** state exhibits a mixed contribution from both oxygen and hydrogen atoms, reflecting its bonding character involving O–H interactions. The valence orbitals **1b₂** and **3a₁** are dominated by oxygen character with a smaller hydrogen contribution, consistent with O–H bonding and hybridization. The **highest occupied molecular orbital (HOMO)**, labeled **1b₁**, is almost entirely oxygen-centered, in agreement with its largely non-bonding O 2p character.
 
 At positive energies, the **unoccupied molecular orbitals** (**4a₁**, **2b₂**) become visible. These states exhibit increased hydrogen character, reflecting their antibonding nature. At higher energies, additional peaks appear that correspond to **artificial (added) molecular orbitals**, which are included to stabilize the SCF procedure and to enable analysis of the unoccupied part of the PDOS.
 
