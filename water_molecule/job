@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=H2O
+#SBATCH -t 120:00:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=32
+
+mpirun cp2k.popt -i input.inp -o output.out
+
