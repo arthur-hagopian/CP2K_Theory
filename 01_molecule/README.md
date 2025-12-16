@@ -261,26 +261,6 @@ Uses the PBE exchange–correlation functional.
 
 ---
 
-### 9.1 van der Waals interactions
-
-```text
-&VDW_POTENTIAL
-  POTENTIAL_TYPE PAIR_POTENTIAL
-  &PAIR_POTENTIAL
-    TYPE DFTD3
-    REFERENCE_FUNCTIONAL PBE
-  &END PAIR_POTENTIAL
-&END VDW_POTENTIAL
-```
-
-Adds long-range dispersion interactions using the DFT-D3 correction.
-
----
-
-
-
----
-
 ## 10. MOTION section: geometry optimization settings
 
 ```text
