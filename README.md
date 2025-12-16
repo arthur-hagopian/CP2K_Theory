@@ -4,6 +4,8 @@ This repository is a **guided walkthrough of the theory, numerical choices, and 
 
 Rather than providing ready-to-use *black-box* input files, this tutorial aims to build **physical and numerical intuition** for CP2K keywords and their impact on the computed electronic structure.
 
+The emphasis is on the CP2K settings that matter most for **electronic-structure analysis**. In particular, this guide is written with the goal of understanding how CP2K parameters affect the **density of states (DOS)** and **projected density of states (PDOS)**, and how to set up calculations that yield reliable DOS/PDOS for **molecules, surfaces, and interfaces**.
+
 ---
 
 ## Scope and philosophy

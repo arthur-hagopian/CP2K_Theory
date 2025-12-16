@@ -1,4 +1,4 @@
-# Water molecule: CP2K input walkthrough
+# Single water molecule
 
 This document explains, step by step, the CP2K input used to describe a **single isolated water molecule**.
 The goal is to build physical and numerical intuition for the main CP2K tags.
