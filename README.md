@@ -10,7 +10,7 @@ Rather than providing ready-to-use *black-box* input files, this tutorial aims t
 
 The tutorial follows a **bottom-up approach**, progressing from minimal systems to realistic electrochemical interfaces. Each step introduces new theoretical concepts and CP2K keywords in a controlled and physically transparent way.
 
-### 1. Single water molecule (`01_molecule`)
+### 1. Single water molecule (`01_molecule\`)
 
 A single, isolated H₂O molecule is used as the **minimal reference system** to introduce the core ingredients of CP2K’s DFT implementation.
 
