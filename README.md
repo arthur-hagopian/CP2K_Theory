@@ -1,8 +1,15 @@
-# CP2K_Theory
+# CP2K Theory: From Molecules to Electrochemical Interfaces
 
-This repository is a guided walkthrough of the **theory and input structure of CP2K**, with a focus on understanding **what each tag does and why it is used**.
+This repository is a **guided walkthrough of the theory, numerical choices, and input structure of CP2K**, with a **direct focus on electronic properties** relevant for **water, metallic systems, and metal–water interfaces**.
 
-The goal is not to provide “black-box” input files, but to build **physical and numerical intuition** behind CP2K settings commonly used in electronic structure and ab initio molecular dynamics calculations.
+Rather than providing ready-to-use *black-box* input files, the aim is to develop **physical and numerical intuition** for:
+- what each CP2K tag does,
+- why it is needed,
+- and how it affects the computed electronic structure.
+
+The emphasis is on understanding CP2K as an **electronic-structure method**, not merely as a molecular dynamics engine.
+
+---
 
 ## Scope and philosophy
 
