@@ -85,9 +85,6 @@
       &V_HARTREE_CUBE ON
         STRIDE 8 8 1
         ADD_LAST SYMBOLIC
-        &EACH
-          GEO_OPT 10
-        &END EACH
       &END V_HARTREE_CUBE
       &PDOS ON
         ADD_LAST SYMBOLIC
@@ -102,15 +99,16 @@
         LIST  1..40
       &END FIXED_ATOMS
   &END CONSTRAINT
+
   &GEO_OPT
-    TYPE minimization
-    MAX_DR 1E-03
-    RMS_DR 1.5E-03
-    MAX_FORCE 1E-02
-    RMS_FORCE 3E-04
+    TYPE MINIMIZATION
     OPTIMIZER BFGS
-    MAX_ITER 200
+    MAX_FORCE [eV/angstrom] 1.0E-3
+    RMS_FORCE [eV/angstrom] 5.0E-4
+    MAX_DR    [angstrom]    1.0E-2
+    RMS_DR    [angstrom]    5.0E-3
   &END GEO_OPT
+
   &PRINT
     &TRAJECTORY
       ADD_LAST SYMBOLIC

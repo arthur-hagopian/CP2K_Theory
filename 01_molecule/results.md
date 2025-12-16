@@ -1,12 +1,12 @@
-# Results - Single water molecule
+# Single water molecule
 
-This section presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed via a geometry optimization using CP2K. The computational parameters used for these calculations are those described in **README.md** and **input.inp**, and define the reference setup for the first set of results shown below.
+This section presents the **projected density of states (PDOS)** for a **single water molecule in an empty (non-periodic) simulation box**, computed via a geometry optimization using CP2K. The computational parameters used for these calculations are those described in **README.md** and **input.inp**, and define the reference setup for the first set of results shown below. The initial geometry used for these calculation is given in **structure.xyz**.
 
 In the following sections, several key parameters are systematically varied, namely `BASIS_SET`, `CUTOFF`, `EPS_SCF`, and `XC_FUNCTIONAL`, in order to assess their respective impact on the computed PDOS.
 
 ## PDOS of a single water molecule
 
-Figure 1 shows the computed **projected density of states (PDOS)** of an isolated H₂O molecule, decomposed into contributions from **oxygen (O)** and **hydrogen (H)** atoms. Energies are referenced to the Fermi level, which in CP2K is defined as the energy of the **highest occupied molecular orbital (HOMO)** for finite, non-periodic systems.
+Figure 1 shows the computed PDOS of an isolated H₂O molecule, decomposed into contributions from **oxygen (O)** and **hydrogen (H)** atoms. Energies are referenced to the Fermi level, which in CP2K is defined as the energy of the **highest occupied molecular orbital (HOMO)** for finite, non-periodic systems.
 
 The labels used to denote the different molecular orbitals (MOs), e.g. 2a₁, 1b₂, 3a₁, originate from **group-theory**. Specifically, they correspond to the **irreducible representations of the C₂v group**, which is the symmetry group of the H₂O molecule in its equilibrium geometry. The letters (a₁, b₁, b₂) indicate the symmetry of the molecular orbitals with respect to the symmetry operations of the C₂v group, while the leading number labels orbitals of the same symmetry in order of increasing energy.
 
