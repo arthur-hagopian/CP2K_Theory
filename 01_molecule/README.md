@@ -1,5 +1,7 @@
 # Single Water Molecule (`01_molecule/`)
 
+# Single Water Molecule (`01_molecule/`)
+
 This folder contains the CP2K input files and analysis material for a **single H₂O molecule in a large simulation box**, used as the **minimal reference system** throughout this tutorial.
 
 The purpose of this system is to isolate and understand how CP2K settings affect **electronic-structure quantities**, in particular the **density of states (DOS)** and **projected density of states (PDOS)**, without complications from periodicity or metallic states.
@@ -8,12 +10,12 @@ The purpose of this system is to isolate and understand how CP2K settings affect
 
 ## Folder structure
 
-All CP2K inputs for the single water molecule calculations are located in:
-
 ```text
-inputs/
-├── input.inp
-└── structure.xyz
+01_molecule/
+├── inputs/
+│   ├── input.inp
+│   └── structure.xyz
+└── results.md
 ```
 
 ---
