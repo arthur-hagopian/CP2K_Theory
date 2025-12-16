@@ -62,9 +62,9 @@ The `&GLOBAL` section controls **how the calculation is run**.
 
 ---
 
-## 2.1 SUBSYS section: atomic structure and simulation cell
+### 2.1 SUBSYS section: atomic structure and simulation cell
 
-### 2.1.1 Simulation cell
+#### 2.1.1 Simulation cell
 
 ```text
 &SUBSYS
