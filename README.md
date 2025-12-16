@@ -2,12 +2,7 @@
 
 This repository is a **guided walkthrough of the theory, numerical choices, and input structure of CP2K**, with a **direct focus on electronic properties** relevant for **water, metallic systems, and metal–water interfaces**.
 
-Rather than providing ready-to-use *black-box* input files, the aim is to develop **physical and numerical intuition** for:
-- what each CP2K tag does,
-- why it is needed,
-- and how it affects the computed electronic structure.
-
-The emphasis is on understanding CP2K as an **electronic-structure method**, not merely as a molecular dynamics engine.
+Rather than providing ready-to-use *black-box* input files, this tutorial aims to build **physical and numerical intuition** for CP2K keywords and their impact on the computed electronic structure.
 
 ---
 
