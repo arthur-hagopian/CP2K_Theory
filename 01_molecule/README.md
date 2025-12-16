@@ -283,6 +283,20 @@ Uses the PBE exchange–correlation functional.
 &END FORCE_EVAL
 ```
 
+The `&PRINT` section controls **which electronic-structure quantities are written to disk** during the calculation. In this tutorial, the focus is on printing PDOS data.
+
+- `&PDOS ON`  
+  Activates the calculation and output of the projected density of states.
+
+- `NLUMO`  
+  Specifies the number of **unoccupied molecular orbitals** (above the highest occupied level) included in the PDOS. Including unoccupied states is important for visualizing the conduction-band region and ensuring a meaningful energy range in the DOS/PDOS plots.
+
+- `&LDOS` blocks  
+  Each `&LDOS` subsection defines a **projection list**, i.e. which atoms or groups of atoms are used to compute the local (projected) density of states.  
+  The `LIST` indices refer to atom lists defined elsewhere in the input (typically via `&KIND` or explicit atom lists).
+
+Together, these settings determine **which states are projected and written**, directly affecting the quality, resolution, and interpretability of the DOS/PDOS analysis presented in `results.md`.
+
 ## 3. MOTION section: geometry optimization settings
 
 ```text
