@@ -1,11 +1,20 @@
-# Single water molecule
+# Single Water Molecule (`01_molecule/`)
 
-This document explains, step by step, the CP2K input used to describe a **single isolated water molecule**.
-The goal is to build physical and numerical intuition for the main CP2K tags.
+This folder contains the CP2K input files and analysis material for a **single H₂O molecule in a large simulation box**, used as the **minimal reference system** throughout this tutorial.
 
-The emphasis is on the tags that matter most for **electronic-structure analysis**. In particular, this guide is written with the goal of understanding how CP2K settings impact the **density of states (DOS)** and **projected density of states (PDOS)**, and how to set up calculations that yield reliable DOS/PDOS for molecules, surfaces and interfaces.  
+The purpose of this system is to isolate and understand how CP2K settings affect **electronic-structure quantities**, in particular the **density of states (DOS)** and **projected density of states (PDOS)**, without complications from periodicity or metallic states.
 
-The full input discussed below is reproduced in the corresponding `input.inp` file.
+---
+
+## Folder structure
+
+All CP2K inputs for the single water molecule calculations are located in:
+
+```text
+inputs/
+├── input.inp
+└── structure.xyz
+```
 
 ---
 
