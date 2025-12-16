@@ -265,21 +265,21 @@ Uses the PBE exchange–correlation functional.
 ### 2.2.6. PRINT section: what is printed
 
 ```text
-&PRINT
-  &PDOS ON
-    NLUMO 5
-    &LDOS
-      LIST 1
-    &END LDOS
-    &LDOS
-      LIST 2
-    &END LDOS
-    &LDOS
-      LIST 3
-    &END LDOS
-  &END PDOS
-&END PRINT
-&END DFT
+    &PRINT
+      &PDOS ON
+        NLUMO 5
+        &LDOS
+          LIST 1
+        &END LDOS
+        &LDOS
+          LIST 2
+        &END LDOS
+        &LDOS
+          LIST 3
+        &END LDOS
+      &END PDOS
+    &END PRINT
+  &END DFT
 &END FORCE_EVAL
 ```
 
