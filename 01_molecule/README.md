@@ -1,7 +1,5 @@
 # Single Water Molecule (`01_molecule/`)
 
-# Single Water Molecule (`01_molecule/`)
-
 This folder contains the CP2K input files and analysis material for a **single H₂O molecule in a large simulation box**, used as the **minimal reference system** throughout this tutorial.
 
 The purpose of this system is to isolate and understand how CP2K settings affect **electronic-structure quantities**, in particular the **density of states (DOS)** and **projected density of states (PDOS)**, without complications from periodicity or metallic states. The concepts and CP2K settings introduced here form the foundation for metallic slabs (`02_surface/`) and metal–water interfaces (`03_interface/`), where the interpretation of DOS and PDOS becomes progressively more complex.
