@@ -62,9 +62,9 @@ The `&GLOBAL` section controls **how the calculation is run**.
 
 ---
 
-## 3. SUBSYS section: atomic structure and simulation cell
+## 2.1 SUBSYS section: atomic structure and simulation cell
 
-### 3.1 Simulation cell
+### 2.1.1 Simulation cell
 
 ```text
 &SUBSYS
@@ -86,7 +86,7 @@ The `&GLOBAL` section controls **how the calculation is run**.
 
 ---
 
-### 3.2 Atomic coordinates
+### 2.1.2 Atomic coordinates
 
 ```text
 &TOPOLOGY
@@ -99,11 +99,11 @@ The `&GLOBAL` section controls **how the calculation is run**.
   Indicates that atomic coordinates are read from an XYZ file.
 
 - `COORD_FILE_NAME structure.xyz`  
-  File containing the positions of the O and H atoms (located in the `inputs/` directory).
+  File containing the positions of the O and H atoms (see e.g. in the `inputs/` directory).
 
 ---
 
-### 3.3 Atomic kinds: basis sets and pseudopotentials
+### 2.1.3 Atomic kinds: basis sets and pseudopotentials
 
 ```text
 &KIND O
@@ -135,7 +135,7 @@ Each `&KIND` block defines how a given chemical element is treated.
 
 ---
 
-## 4. DFT section: electronic structure setup
+## 2.2 DFT section: electronic structure setup
 
 ```text
 &DFT
@@ -143,11 +143,9 @@ Each `&KIND` block defines how a given chemical element is treated.
   POTENTIAL_FILE_NAME /path/to/GTH_POTENTIALS
 ```
 
-These lines tell CP2K **where to find** the basis sets and pseudopotentials.
+These lines tell CP2K **where to find** the basis sets and pseudopotentials. The placeholder paths shown above **must be modified by the user** to point to the local CP2K data files available on their system.
 
 ---
-
-### 4.1 Total charge
 
 ```text
 CHARGE 0
@@ -157,7 +155,7 @@ Specifies the **total charge of the system**.
 
 ---
 
-## 5. QS section: GPW numerical settings
+## 2.2.1 QS section: GPW numerical settings
 
 ```text
 &QS
@@ -178,7 +176,7 @@ Controls numerical settings specific to the **Gaussian and Plane Waves (GPW)** f
 
 ---
 
-## 6. POISSON section: electrostatics
+## 2.2.2 POISSON section: electrostatics
 
 ```text
 &POISSON
@@ -191,7 +189,7 @@ Uses a wavelet-based Poisson solver suitable for isolated systems.
 
 ---
 
-## 7. MGRID section: real-space grids
+## 2.2.3 MGRID section: real-space grids
 
 ```text
 &MGRID
@@ -217,7 +215,7 @@ Controls the **real-space multigrid representation** of the electronic density i
 
 ---
 
-## 8. SCF section: self-consistent field procedure
+## 2.2.4 SCF section: self-consistent field procedure
 
 ```text
 &SCF
@@ -252,7 +250,7 @@ Defines how the **self-consistent field (SCF)** cycle is performed, i.e. how the
 
 ---
 
-## 9. XC section: exchange–correlation
+## 2.2.5 XC section: exchange–correlation
 
 ```text
 &XC
@@ -264,7 +262,7 @@ Uses the PBE exchange–correlation functional.
 
 ---
 
-## 10. XC section: exchange–correlation
+## 2.2.6. PRINT section: what is printed
 
 ```text
 &PRINT
@@ -283,8 +281,9 @@ Uses the PBE exchange–correlation functional.
     &END PRINT
   &END DFT
 &END FORCE_EVAL
+```
 
-## 11. MOTION section: geometry optimization settings
+## 3. MOTION section: geometry optimization settings
 
 ```text
 &MOTION
@@ -321,8 +320,3 @@ The `&MOTION` section controls **ionic motion**, i.e. how atomic positions are u
 
 ---
 
-## Final remarks
-
-This water molecule example provides a **minimal, well-controlled reference system**.
-Most of the tags introduced here will reappear in more complex simulations,
-such as **metal/water interfaces**, where periodicity and electrostatics play a central role.
