@@ -8,25 +8,52 @@ Rather than providing ready-to-use *black-box* input files, this tutorial aims t
 
 ## Scope and philosophy
 
-The repository progresses from simple to more realistic systems:
+The tutorial follows a **bottom-up approach**, progressing from minimal systems to realistic electrochemical interfaces. Each step introduces new theoretical concepts and CP2K keywords in a controlled and physically transparent way.
 
-1. **Single water molecule in a box**  
-   Used as a minimal system to introduce and dissect:
-   - `&DFT`, `&QS`, `&MGRID`, `&SCF`
-   - basis sets and pseudopotentials
-   - cutoffs, grids, and convergence parameters
+### 1. Single water molecule in a box
 
-2. **Metal / water interface**  
-   Used to illustrate more advanced concepts:
-   - periodic slabs and vacuum
-   - surface dipole corrections
-   - electrostatic boundary conditions
-   - tags relevant for interfacial AIMD simulations
+A single, isolated H₂O molecule is used as the **minimal reference system** to introduce the core ingredients of CP2K’s DFT implementation.
 
-For each section, the CP2K input tags are explained in detail, with emphasis on:
-- their **physical meaning**
-- their **numerical role**
-- common pitfalls and best practices
+This section focuses on:
+- the structure of `&DFT` and `&QS`
+- Gaussian basis sets and GTH pseudopotentials
+- plane-wave grids (`&MGRID`) and cutoff convergence
+- SCF procedures and convergence criteria (`&SCF`, `EPS_SCF`)
+- orbital energies and projected density of states (PDOS)
+
+Because the system is simple and non-periodic, it allows direct comparison to **textbook molecular orbitals** and highlights how numerical settings affect electronic properties.
+
+---
+
+### 2. Metallic systems and periodicity
+
+The second step moves to **metallic systems**, introducing periodic boundary conditions and the physics of extended electronic states.
+
+Key topics include:
+- periodic cells and k-point sampling
+- metallic SCF convergence and electronic smearing
+- Fermi level and occupation schemes
+- work functions and surface electronic structure
+- projected density of states in extended systems
+
+This section establishes the conceptual tools required to move from molecules to surfaces.
+
+---
+
+### 3. Metal–water interfaces
+
+The final part addresses **metal–water interfaces**, which are central to electrochemistry and interfacial AIMD simulations.
+
+Here, the focus is on:
+- slab models with explicit water layers
+- vacuum separation and electrostatic boundary conditions
+- surface dipole corrections
+- charge neutrality and potential alignment
+- CP2K tags specific to interfacial AIMD calculations
+
+At this stage, CP2K is used to analyze **interfacial electronic structure and electrostatics**, rather than only atomic trajectories.
+
+---
 
 ## Intended audience
 
