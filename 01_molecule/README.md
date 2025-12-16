@@ -4,19 +4,13 @@
 
 This folder contains the CP2K input files and analysis material for a **single H₂O molecule in a large simulation box**, used as the **minimal reference system** throughout this tutorial.
 
-The purpose of this system is to isolate and understand how CP2K settings affect **electronic-structure quantities**, in particular the **density of states (DOS)** and **projected density of states (PDOS)**, without complications from periodicity or metallic states.
+The purpose of this system is to isolate and understand how CP2K settings affect **electronic-structure quantities**, in particular the **density of states (DOS)** and **projected density of states (PDOS)**, without complications from periodicity or metallic states. The concepts and CP2K settings introduced here form the foundation for metallic slabs (`02_surface/`) and metal–water interfaces (`03_interface/`), where the interpretation of DOS and PDOS becomes progressively more complex.
 
----
+The CP2K input files are located in the `inputs/` directory and include:
+- `input.inp`, which defines the electronic-structure calculation,
+- `structure.xyz`, which contains the atomic structure of an isolated water molecule.
 
-## Folder structure
-
-```text
-01_molecule/
-├── inputs/
-│   ├── input.inp
-│   └── structure.xyz
-└── results.md
-```
+In addition, this folder contains a `results.md` file, where the electronic-structure results are discussed in detail. This includes DOS/PDOS plots and interpretation of molecular orbital energies.
 
 ---
 
@@ -107,7 +101,7 @@ The `&GLOBAL` section controls **how the calculation is run**.
   Indicates that atomic coordinates are read from an XYZ file.
 
 - `COORD_FILE_NAME structure.xyz`  
-  File containing the positions of the O and H atoms.
+  File containing the positions of the O and H atoms (located in the `inputs/` directory).
 
 ---
 
