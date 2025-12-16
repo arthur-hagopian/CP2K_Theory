@@ -25,7 +25,7 @@ Because the system is simple and non-periodic, it allows direct comparison to **
 
 ---
 
-### 2. Metallic systems and periodicity
+### 2. Metallic surface (`02_surface/`)
 
 The second step moves to **metallic systems**, introducing periodic boundary conditions and the physics of extended electronic states.
 
@@ -40,7 +40,7 @@ This section establishes the conceptual tools required to move from molecules to
 
 ---
 
-### 3. Metal–water interfaces
+### 3. Metal–water interface (`03_interface/`)
 
 The final part addresses **metal–water interfaces**, which are central to electrochemistry and interfacial AIMD simulations.
 
