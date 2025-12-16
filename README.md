@@ -1,4 +1,4 @@
-# CP2K Theory: From Molecules to Electrochemical Interfaces
+# CP2K Theory: From Molecules to Interfaces
 
 This repository is a **guided walkthrough of the theory, numerical choices, and input structure of CP2K**, with a **direct focus on electronic properties** relevant for **water, metallic systems, and metal–water interfaces**.
 
