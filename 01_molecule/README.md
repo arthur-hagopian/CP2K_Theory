@@ -1,9 +1,9 @@
 # Water molecule: CP2K input walkthrough
 
 This document explains, step by step, the CP2K input used to describe a **single isolated water molecule**.
-The goal is to build physical and numerical intuition for the main CP2K tags, starting from the simplest possible system.
+The goal is to build physical and numerical intuition for the main CP2K tags.
 
-The emphasis is on the tags that matter most for **electronic-structure analysis**. In particular, this guide is written with the goal of understanding how CP2K settings impact the **density of states (DOS)** and **projected density of states (PDOS)**, and how to set up calculations that yield reliable DOS/PDOS for both simple molecules and, later, interfaces.  
+The emphasis is on the tags that matter most for **electronic-structure analysis**. In particular, this guide is written with the goal of understanding how CP2K settings impact the **density of states (DOS)** and **projected density of states (PDOS)**, and how to set up calculations that yield reliable DOS/PDOS for molecules, surfaces and interfaces.  
 
 The full input discussed below is reproduced in the corresponding `input.inp` file.
 
@@ -249,7 +249,7 @@ Defines how the **self-consistent field (SCF)** cycle is performed, i.e. how the
 
 ---
 
-## 9. XC section: exchange–correlation and dispersion
+## 9. XC section: exchange–correlation
 
 ```text
 &XC
@@ -261,7 +261,27 @@ Uses the PBE exchange–correlation functional.
 
 ---
 
-## 10. MOTION section: geometry optimization settings
+## 10. XC section: exchange–correlation
+
+```text
+&PRINT
+  &PDOS ON
+    NLUMO 5
+    &LDOS
+      LIST 1
+    &END LDOS
+    &LDOS
+      LIST 2
+        &END LDOS
+        &LDOS
+          LIST 3
+        &END LDOS
+      &END PDOS
+    &END PRINT
+  &END DFT
+&END FORCE_EVAL
+
+## 11. MOTION section: geometry optimization settings
 
 ```text
 &MOTION
