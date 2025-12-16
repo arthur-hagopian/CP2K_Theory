@@ -62,9 +62,9 @@ The `&GLOBAL` section controls **how the calculation is run**.
 
 ---
 
-### 2.1 SUBSYS section: atomic structure and simulation cell
+## 2.1 SUBSYS section: atomic structure and simulation cell
 
-#### 2.1.1 Simulation cell
+### 2.1.1 Simulation cell
 
 ```text
 &SUBSYS
@@ -155,7 +155,7 @@ Specifies the **total charge of the system**.
 
 ---
 
-## 2.2.1 QS section: GPW numerical settings
+### 2.2.1 QS section: GPW numerical settings
 
 ```text
 &QS
@@ -176,7 +176,7 @@ Controls numerical settings specific to the **Gaussian and Plane Waves (GPW)** f
 
 ---
 
-## 2.2.2 POISSON section: electrostatics
+### 2.2.2 POISSON section: electrostatics
 
 ```text
 &POISSON
@@ -189,7 +189,7 @@ Uses a wavelet-based Poisson solver suitable for isolated systems.
 
 ---
 
-## 2.2.3 MGRID section: real-space grids
+### 2.2.3 MGRID section: real-space grids
 
 ```text
 &MGRID
@@ -215,7 +215,7 @@ Controls the **real-space multigrid representation** of the electronic density i
 
 ---
 
-## 2.2.4 SCF section: self-consistent field procedure
+### 2.2.4 SCF section: self-consistent field procedure
 
 ```text
 &SCF
@@ -250,7 +250,7 @@ Defines how the **self-consistent field (SCF)** cycle is performed, i.e. how the
 
 ---
 
-## 2.2.5 XC section: exchange–correlation
+### 2.2.5 XC section: exchange–correlation
 
 ```text
 &XC
@@ -262,7 +262,7 @@ Uses the PBE exchange–correlation functional.
 
 ---
 
-## 2.2.6. PRINT section: what is printed
+### 2.2.6. PRINT section: what is printed
 
 ```text
 &PRINT
