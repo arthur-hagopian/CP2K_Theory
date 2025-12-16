@@ -1,4 +1,4 @@
-# Single Water Molecule (`01_molecule/`)
+# Single Water Molecule
 
 This folder contains the CP2K input files and analysis material for a **single H₂O molecule in a large simulation box**, used as the **minimal reference system** throughout this tutorial.
 
