@@ -273,13 +273,13 @@ Uses the PBE exchange–correlation functional.
     &END LDOS
     &LDOS
       LIST 2
-        &END LDOS
-        &LDOS
-          LIST 3
-        &END LDOS
-      &END PDOS
-    &END PRINT
-  &END DFT
+    &END LDOS
+    &LDOS
+      LIST 3
+    &END LDOS
+  &END PDOS
+&END PRINT
+&END DFT
 &END FORCE_EVAL
 ```
 
