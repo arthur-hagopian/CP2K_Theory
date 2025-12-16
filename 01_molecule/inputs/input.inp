@@ -78,14 +78,6 @@
         XC_SMOOTH_RHO NN50
         XC_DERIV NN50_SMOOTH
       &END XC_GRID
-      &VDW_POTENTIAL
-        POTENTIAL_TYPE PAIR_POTENTIAL
-        &PAIR_POTENTIAL
-          TYPE DFTD3
-          PARAMETER_FILE_NAME /home/hagopian/cp2k/basis/dftd3.dat
-          REFERENCE_FUNCTIONAL PBE
-        &END PAIR_POTENTIAL
-      &END VDW_POTENTIAL
     &END XC
 
     &PRINT
